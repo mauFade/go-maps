@@ -10,12 +10,12 @@ type User struct {
 func main() {
 	myMap := make(map[string]User)
 
-	myUser := User{
+	myUser := &User{
 		FirstName:  "Mau",
 		SecondName: "Cardoso",
 	}
 
-	myMap["me"] = myUser
+	myMap["me"] = *myUser
 
 	log.Println(myMap["me"].SecondName, myMap["me"].FirstName)
 }
